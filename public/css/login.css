@@ -1,0 +1,53 @@
+#login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 99.6 vw;
+  height: 94.9vh;
+
+  background: url(../img2/bg/loginBg.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#loginFormId {
+  width: 20em;
+  height: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  background: white;
+
+  opacity: 0.6;
+  transition: 0.3s opacity linear;
+  border-radius: 0.6em;
+}
+
+#loginFormId:hover {
+  opacity: 0.9;
+}
+
+.formElementsStyle {
+  width: 15em;
+  height: 2.7em;
+  border-radius: 0.6em;
+
+  /* outline: none; */
+  border: rgb(255, 255, 255);
+  transition: 0.2s border linear;
+  box-shadow: none;
+  text-align: center;
+}
+
+.formElementsStyle:focus {
+  outline: none;
+}
+
+#loginFormId:hover .formElementsStyle {
+  border: solid rgb(192, 192, 192) 4px;
+}

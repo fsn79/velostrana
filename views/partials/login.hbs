@@ -1,0 +1,63 @@
+{{!-- <<<<<<< HEAD
+<form id="loginForm" action="/login" method="POST">
+  {{message}}
+  {{titleCheck}}
+  <input name="loginEmail" type="email" placeholder="Введите вашу почту" required>
+  <input name="loginPassword" type="password" placeholder="Введите пароль" required>
+  <button type="submit">Войти</button>
+======= --}}
+ <header>
+    <nav>
+      <div class="container">
+        <ul class="menu">
+          {{#if user}}
+            <li class="menu_item"><a id="homeLink" class="menu_link" href="/">Главная</a></li>
+            <li class="menu_item"><a id="bestRoutes" class="menu_link" href="#">Лучшие веломаршруты</a></li>
+            <li class="menu_item"><a id="registerLink" class="menu_link" href="/#">{{user.name}}</a></li>
+            <li class="menu_item"><a id="loginLink" class="menu_link" href="/logout">Выйти</a></li>
+            {{!-- <li class="pipe-separate t-light-green left"><a id="homeLink" href="/">home</a></li>
+            <li class="pipe-separate t-light-green left"><a id="myProfile" href="#">{{user.name}}</a></li>
+            <li class="pipe-separate t-light-green left"><a id="logOut"href="/logout">logOut</a></li> --}}
+          {{else}}
+            <li class="menu_item"><a id="homeLink" class="menu_link" href="/">Главная</a></li>
+            <li class="menu_item"><a id="bestRoutes" class="menu_link" href="#">Лучшие веломаршруты</a></li>
+            <li class="menu_item"><a id="registerLink" class="menu_link" href="/registration">Зарегистрироваться</a></li>
+            <li class="menu_item"><a id="loginLink" class="menu_link" href="/login">Войти</a></li>
+          {{/if}}
+        </ul>
+      </div>
+    </nav>
+    <div class="subheader">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 offset-md-1">
+            <a href="#" class="subheader_logo">VELOSTRANA 🚲</a>
+
+            <div class="subheader_official">ВЕЛОМАРШРУТЫ ПО ВСЕЙ РОССИИ</div>
+          </div>
+
+          <div class="col-md-2 offset-md-2">
+            <div class="subheader_call">По всем вопросам звонить</div>
+            <a href="tel:88005553535" class="subheader_phone">8 800 555 35 35</a>
+          </div>
+
+          <div class="col-md-2">
+            <button class="subheader_btn">Посмотреть маршруты</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div id="login-container">
+  <form id="loginFormId" name="loginForm" action="" method="POST">
+  {{message}}
+  {{titleCheck}}
+  <input class="formElementsStyle" name="loginEmail" type="email" placeholder="Введите вашу почту" required>
+  <input class="formElementsStyle" name="loginPassword" type="password" placeholder="Введите пароль" required>
+  <button class="formElementsStyle" name="loginBtn" type="submit">Войти</button>
+{{!-- >>>>>>> 23aff85a6e50e577b1c258b576768b2f892dd54d --}}
+</form>
+{{!-- <button type="button" id="fromLoginToMainBtn">На главную</button> --}}
+</div>
+
