@@ -1,13 +1,12 @@
- <header>
+<header>
     <nav>
       <div class="container">
         <ul class="menu">
-          {{#if user}}
+          {{#if name}}
             <li class="menu_item"><a id="homeLink" class="menu_link" href="/">Главная</a></li>
             <li class="menu_item"><a id="bestRoutes" class="menu_link" href="/allRoutes">Все веломаршруты</a></li>
-            <li class="menu_item"><a id="registerLink" class="menu_link" href="/#">{{user.name}}</a></li>
+            <li class="menu_item"><a id="registerLink" class="menu_link" href="/#">{{name}}</a></li>
             <li class="menu_item"><a id="loginLink" class="menu_link" href="/logout">Выйти</a></li>
-            
           {{else}}
             <li class="menu_item"><a id="homeLink" class="menu_link" href="/">Главная</a></li>
             <li class="menu_item"><a id="bestRoutes" class="menu_link" href="/allRoutes">Все веломаршруты</a></li>
@@ -39,12 +38,6 @@
     </div>
   </header>
 
-<div id="login-container">
-<form id="regForm" action="/registration" method="post">
-{{titleCheck}}
-    <input class="formElementsStyle" type="text" name="inputName" placeholder="Введите ваше имя" required></label>
-    <input class="formElementsStyle" type="email" name="inputEmail" placeholder="Введите вашу почту" required></label>
-    <input class="formElementsStyle" type="password" name="inputPassw" placeholder="Придумайте пароль" required></label>
-    <button class="formElementsStyle btn-animation" type="submit">Зарегистрироваться</button>
-</form>
+<div id="allRoutes-container">
+  Извините, мы не успели ;((
 </div>

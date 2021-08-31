@@ -5,12 +5,12 @@
         <ul class="menu">
           {{#if name}}
             <li class="menu_item"><a id="homeLink" class="menu_link" href="/">Главная</a></li>
-            <li class="menu_item"><a id="bestRoutes" class="menu_link" href="#">Лучшие веломаршруты</a></li>
+            <li class="menu_item"><a id="bestRoutes" class="menu_link" href="/allRoutes">Все веломаршруты</a></li>
             <li class="menu_item"><a id="registerLink" class="menu_link" href="/#">{{name}}</a></li>
             <li class="menu_item"><a id="loginLink" class="menu_link" href="/logout">Выйти</a></li>
           {{else}}
             <li class="menu_item"><a id="homeLink" class="menu_link" href="/">Главная</a></li>
-            <li class="menu_item"><a id="bestRoutes" class="menu_link" href="#">Лучшие веломаршруты</a></li>
+            <li class="menu_item"><a id="bestRoutes" class="menu_link" href="/allRoutes">Все веломаршруты</a></li>
             <li class="menu_item"><a id="registerLink" class="menu_link" href="/registration">Зарегистрироваться</a></li>
             <li class="menu_item"><a id="loginLink" class="menu_link" href="/login">Войти</a></li>
           {{/if}}
@@ -32,7 +32,7 @@
           </div>
 
           <div class="col-md-2">
-            <button class="subheader_btn" href="/home/routes">Посмотреть маршруты</button>
+            <button id="routesPageBtn" class="subheader_btn" type="submit"><a style="color:white" href="/routesPage">Лучшие маршруты</a></button>
           </div>
         </div>
       </div>
@@ -106,7 +106,7 @@
             <div class="reasons_descr">
               <div class="reasons_subtitle">Лучшие маршруты в любое время суток</div>
               <div class="reasons_text">
-                В темное время суток умные алгоритмы нашего приложения избегают плохоосвещенные дворы, неблагополучные районы и прочие потенциально опасные места. (Именно поэтому наше приложение не работает в Барнауле после заката).
+                В темное время суток умные алгоритмы нашего приложения помогают избегать плохоосвещенные дворы, неблагополучные районы и прочие потенциально опасные места. (Именно поэтому наше приложение не работает в Барнауле после заката).
               </div>
             </div>
           </div>
@@ -179,10 +179,7 @@
         <p class="copyright">Elbrus Bootcamp © 2021</p>
     </footer>
 </div>
-{{!-- <div id="map1" style="width: 200px; height: 200px"></div>
-<div id="map2" style="width: 200px; height: 200px"></div>
-<div id="map3" style="width: 200px; height: 200px"></div>
-<div id="map4" style="width: 200px; height: 200px"></div> --}}
+
 
 
 

@@ -1,26 +1,17 @@
-{{!-- <<<<<<< HEAD
-<form id="loginForm" action="/login" method="POST">
-  {{message}}
-  {{titleCheck}}
-  <input name="loginEmail" type="email" placeholder="Введите вашу почту" required>
-  <input name="loginPassword" type="password" placeholder="Введите пароль" required>
-  <button type="submit">Войти</button>
-======= --}}
+
  <header>
     <nav>
       <div class="container">
         <ul class="menu">
           {{#if user}}
             <li class="menu_item"><a id="homeLink" class="menu_link" href="/">Главная</a></li>
-            <li class="menu_item"><a id="bestRoutes" class="menu_link" href="#">Лучшие веломаршруты</a></li>
+            <li class="menu_item"><a id="bestRoutes" class="menu_link" href="/allRoutes">Все веломаршруты</a></li>
             <li class="menu_item"><a id="registerLink" class="menu_link" href="/#">{{user.name}}</a></li>
             <li class="menu_item"><a id="loginLink" class="menu_link" href="/logout">Выйти</a></li>
-            {{!-- <li class="pipe-separate t-light-green left"><a id="homeLink" href="/">home</a></li>
-            <li class="pipe-separate t-light-green left"><a id="myProfile" href="#">{{user.name}}</a></li>
-            <li class="pipe-separate t-light-green left"><a id="logOut"href="/logout">logOut</a></li> --}}
+
           {{else}}
             <li class="menu_item"><a id="homeLink" class="menu_link" href="/">Главная</a></li>
-            <li class="menu_item"><a id="bestRoutes" class="menu_link" href="#">Лучшие веломаршруты</a></li>
+            <li class="menu_item"><a id="bestRoutes" class="menu_link" href="/allRoutes">Все веломаршруты</a></li>
             <li class="menu_item"><a id="registerLink" class="menu_link" href="/registration">Зарегистрироваться</a></li>
             <li class="menu_item"><a id="loginLink" class="menu_link" href="/login">Войти</a></li>
           {{/if}}
@@ -42,7 +33,7 @@
           </div>
 
           <div class="col-md-2">
-            <button class="subheader_btn">Посмотреть маршруты</button>
+            <button id="routesPageBtn" class="subheader_btn" type="submit"><a style="color:white" href="/routesPage">Лучшие маршруты</a></button>
           </div>
         </div>
       </div>
@@ -55,7 +46,7 @@
   {{titleCheck}}
   <input class="formElementsStyle" name="loginEmail" type="email" placeholder="Введите вашу почту" required>
   <input class="formElementsStyle" name="loginPassword" type="password" placeholder="Введите пароль" required>
-  <button class="formElementsStyle" name="loginBtn" type="submit">Войти</button>
+  <button class="formElementsStyle btn-animation" name="loginBtn" type="submit">Войти</button>
 {{!-- >>>>>>> 23aff85a6e50e577b1c258b576768b2f892dd54d --}}
 </form>
 {{!-- <button type="button" id="fromLoginToMainBtn">На главную</button> --}}

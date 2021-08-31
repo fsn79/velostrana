@@ -1,6 +1,10 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+a {
+  color: white;
+  text-decoration: none;
+} 
 
 
 header {
@@ -87,7 +91,7 @@ nav {
     /* background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%); */
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
     color: #ffffff;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 400;
     text-transform: uppercase;
 }

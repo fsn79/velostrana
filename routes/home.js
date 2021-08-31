@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   res.render('index', {
     layout: false, main
   });
-  // res.redirect('/home');
+
 });
 
 router.get('/routes', async (req, res) => {

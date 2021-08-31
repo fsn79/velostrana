@@ -1,0 +1,181 @@
+{{!-- <<<<<<< HEAD --}} <header>
+  <nav>
+    <div class="container">
+      <ul class="menu">
+        {{#if name}}
+            <li class="menu_item"><a id="homeLink" class="menu_link" href="/">Главная</a></li>
+            <li class="menu_item"><a id="bestRoutes" class="menu_link" href="/allRoutes">Все веломаршруты</a></li>
+            <li class="menu_item"><a id="registerLink" class="menu_link" href="/#">{{name}}</a></li>
+            <li class="menu_item"><a id="loginLink" class="menu_link" href="/logout">Выйти</a></li>
+          {{else}}
+            <li class="menu_item"><a id="homeLink" class="menu_link" href="/">Главная</a></li>
+            <li class="menu_item"><a id="bestRoutes" class="menu_link" href="/allRoutes">Все веломаршруты</a></li>
+            <li class="menu_item"><a id="registerLink" class="menu_link" href="/registration">Зарегистрироваться</a></li>
+            <li class="menu_item"><a id="loginLink" class="menu_link" href="/login">Войти</a></li>
+          {{/if}}
+      </ul>
+    </div>
+  </nav>
+  <div class="subheader">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 offset-md-1">
+          <a href="#" class="subheader_logo">VELOSTRANA 🚲</a>
+
+          <div class="subheader_official">ВЕЛОМАРШРУТЫ ПО ВСЕЙ РОССИИ</div>
+        </div>
+
+        <div class="col-md-2 offset-md-2">
+          <div class="subheader_call">По всем вопросам звонить</div>
+          <a href="tel:88005553535" class="subheader_phone">8 800 555 35 35</a>
+        </div>
+
+        <div class="col-md-2">
+          <button id="routesPageBtn" class="subheader_btn" type="submit"><a style="color:white" href="/routesPage"> Лучшие маршруты</a></button>
+          {{!-- =======
+          <header>
+            <nav>
+              <div class="container">
+                <ul class="menu">
+                  {{#if user}}
+                  <li class="menu_item"><a id="homeLink" class="menu_link" href="/">Главная</a></li>
+                  <li class="menu_item"><a id="bestRoutes" class="menu_link" href="/allRoutes">Все веломаршруты</a></li>
+                  <li class="menu_item"><a id="registerLink" class="menu_link" href="/#">{{user.name}}</a></li>
+                  <li class="menu_item"><a id="loginLink" class="menu_link" href="/logout">Выйти</a></li>
+                  {{else}}
+                  <li class="menu_item"><a id="homeLink" class="menu_link" href="/">Главная</a></li>
+                  <li class="menu_item"><a id="bestRoutes" class="menu_link" href="/allRoutes">Все веломаршруты</a></li>
+                  <li class="menu_item"><a id="registerLink" class="menu_link"
+                      href="/registration">Зарегистрироваться</a></li>
+                  <li class="menu_item"><a id="loginLink" class="menu_link" href="/login">Войти</a></li>
+                  {{/if}}
+                </ul>
+              </div>
+            </nav>
+            <div class="subheader">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4 offset-md-1">
+                    <a href="#" class="subheader_logo">VELOSTRANA 🚲</a>
+
+                    <div class="subheader_official">ВЕЛОМАРШРУТЫ ПО ВСЕЙ РОССИИ</div>
+                  </div>
+
+                  <div class="col-md-2 offset-md-2">
+                    <div class="subheader_call">По всем вопросам звонить</div>
+                    <a href="tel:88005553535" class="subheader_phone">8 800 555 35 35</a>
+                  </div>
+
+                  <div class="col-md-2">
+                    <button id="routesPageBtn" class="subheader_btn" type="submit"><a style="color:white"
+                        href="/routesPage">Лучшие маршруты</a></button>
+                  </div>
+                  >>>>>>> 229ba687ed2d85a58b657050b3ff75b05cbed01e --}}
+                </div>
+              </div>
+            </div>
+        </div>
+        </header>
+
+
+
+
+        {{!-- <div id="map-container">
+          <div class="divOfDivs">
+            <div class="mapDiv">
+              <div class="mapPicture">
+                <div id="map0"></div>
+              </div>
+              <div class="divDesc">
+                <p title="Очень длинное и непонятное название маршрута" class="mapText">Очень длинное и непонятное
+                  название маршрута</p>
+                <p class="mapText"></p>
+                <p class="mapText"></p>
+                <p class="mapText"></p>
+              </div>
+            </div>
+
+            <div class="mapDiv">
+              <div class="mapPicture">
+                <div id="map1"></div>
+              </div>
+              <div class="divDesc">
+
+              </div>
+            </div>
+            <div class="mapDiv">
+              <div class="mapPicture">
+                <div id="map2"></div>
+
+              </div>
+              <div class="divDesc">
+
+              </div>
+            </div>
+            <div class="mapDiv">
+              <div class="mapPicture">
+                <div id="map3"></div>
+
+              </div>
+              <div class="divDesc">
+
+              </div>
+            </div>
+          </div> --}}
+
+
+          {{!-- <<<<<<< HEAD --}} </div>
+
+            {{#each arrRoutes}}
+            <div id="source{{@index}}" class="js-map" style="width: 200px; height: 200px" data-id="{{this.id}}"
+              data-start-point="{{this.startPoint}}" data-end-point="{{this.endPoint}}" data-comment="{{this.comment}}"
+              data-name="{{this.name}}" data-likes="{{this.likes}}"
+              data-userId="{{this.userId}}"
+              ></div>
+            {{/each}}
+
+          <div id="map-container">
+            {{#each arrRoutes}}
+              <div class="divOfDivs">
+                <div class="mapDiv">
+                  <div class="mapPicture">
+                    <div id="map{{@index}}"></div>
+                  </div>
+                  <div class="divDesc">
+                    <p class="mapText">Маршрут №: {{this.id}}</p>
+                    <p class="mapText">Название: {{this.name}}</p>
+                    <p class="mapText">Лайки: {{this.likes}}</p>
+                    <p class="mapText">Комментарии: {{this.comment}}</p>
+                    
+                </div>
+              </div>
+            </div>
+            {{/each}}
+            </div>
+            {{!-- ======= --}}
+
+
+            {{!--
+            <script>
+              ymaps.ready(init);
+              function init() {
+                // Создание карты.
+                const myMap1 = new ymaps.Map("map1", {
+                  center: [55.76, 37.64],
+                  zoom: 10
+                });
+                const myMap2 = new ymaps.Map("map2", {
+                  center: [55.76, 37.64],
+                  zoom: 10
+                });
+                const myMap3 = new ymaps.Map("map3", {
+                  center: [55.76, 37.64],
+                  zoom: 10
+                });
+                const myMap4 = new ymaps.Map("map4", {
+                  center: [55.76, 37.64],
+                  zoom: 10
+                });
+              }
+            </script> --}}
+            {{!-- >>>>>>> 229ba687ed2d85a58b657050b3ff75b05cbed01e --}}

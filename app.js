@@ -16,6 +16,8 @@ const mainRouter = require('./routes/main')
 const homeRouter = require('./routes/home')
 const loginRouter = require('./routes/login')
 const logoutRouter = require('./routes/logout')
+const routesPage = require('./routes/routesPage');
+const allRoutes = require('./routes/allRoutes');
 //>>>>>>>>>>>>>
 
 //hbs on
@@ -34,7 +36,7 @@ hbs.registerPartials(__dirname + '/views/partials', function (err) {})
 app.use(
   session({
     store: new FileStore(),
-    // key: 'velostrana',
+    key: 'mira',
     secret: 'youInSession',
     resave: false,
     saveUninitialized: false,
@@ -47,14 +49,16 @@ app.use(
 //>>>>>>>>>>>>>>
 
 // call routes >>>>>>>>>>
-app.use('/registration', regRouter)
-app.use('/', mainRouter)
-app.use('/home', homeRouter)
-app.use('/login', loginRouter)
-app.use('/logout', logoutRouter)
-app.use('/auth/:name', mainRouter)
+app.use('/registration', regRouter);
+app.use('/', mainRouter);
+app.use('/home', homeRouter);
+app.use('/login', loginRouter);
+app.use('/logout', logoutRouter);
+app.use('/auth/:name', mainRouter);
+app.use('/routesPage', routesPage);
+app.use('/allRoutes', allRoutes);
 //>>>>>>>>>>>>>
 
 app.listen(PORT, () => {
-  console.log(`>> server app on ${PORT}`)
+  console.log(`>> server app on ${PORT}`);
 })
